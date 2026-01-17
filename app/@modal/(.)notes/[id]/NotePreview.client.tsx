@@ -4,7 +4,6 @@ import Modal from "@/components/Modal/Modal";
 import { fetchNoteById } from "@/lib/api";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 interface NotePreviewProps {
   id: string;

@@ -42,7 +42,9 @@ export default function NotesClient({ initialPage = 1, initialQuery = '', initia
     <div className={css.app}>
       <header className={css.toolbar}>
         <SearchBox
-          setSearchQuery={(query) => handleSearchChange(query)} />
+            value={searchQuery}
+            onChange={setSearchQuery}
+/>
         {isSuccess && data.totalPages > 1 && (
           <Pagination
             totalPages={data.totalPages}
@@ -61,7 +63,7 @@ export default function NotesClient({ initialPage = 1, initialQuery = '', initia
 
       {isOpenModal && (
         <Modal onClose={() => setIsOpenModal(false)}>
-          <NoteForm onClose={() => setIsOpenModal(false)} />
+          <NoteForm onCancel={() => setIsOpenModal(false)} />
         </Modal>
       )}
     </div>
