@@ -43,7 +43,7 @@ export default function NotesClient({ initialPage = 1, initialQuery = '', initia
       <header className={css.toolbar}>
         <SearchBox
             value={searchQuery}
-            onChange={setSearchQuery}
+            onChange={handleSearchChange}
 />
         {isSuccess && data.totalPages > 1 && (
           <Pagination
